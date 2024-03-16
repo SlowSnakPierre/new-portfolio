@@ -1,12 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { appWithTranslation } from 'next-i18next';
+import nextI18NextConfig from '../next-i18next.config.js';
 
 import Layout from "../components/Layout";
 import Transition from "../components/Transition";
 
 import "../styles/globals.css";
-import { initReactI18next } from "react-i18next";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -23,4 +23,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default appWithTranslation(MyApp, initReactI18next);
+export default appWithTranslation(MyApp, nextI18NextConfig);
