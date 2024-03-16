@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import Transition from "../components/Transition";
 
 import "../styles/globals.css";
+import { initReactI18next } from "react-i18next";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -22,4 +23,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default appWithTranslation(MyApp);
+export default appWithTranslation(MyApp, initReactI18next);
