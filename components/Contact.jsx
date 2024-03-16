@@ -24,7 +24,6 @@ export function Email(props) {
     return (
         <Html>
             <Head />
-            <Preview>Yelp recent login</Preview>
             <Body style={main}>
                 <Container>
                     <Section style={logo}>
