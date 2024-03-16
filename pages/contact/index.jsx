@@ -16,17 +16,21 @@ const Contact = () => {
     event.preventDefault();
     setIsLoading(true);
 
-    const myForm = event.target;
+    const myForm = event.currentTarget;
     const formData = new FormData(myForm);
+    console.log(formData);
 
-    fetch("/", {
+    fetch("/api/contact", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: new URLSearchParams(formData),
     })
-      .then(() => alert("Thank you. I will get back to you ASAP."))
+      .then((response) => response.json())
+      .then((response) => alert(response.message))
       .catch((error) => console.log(error))
-      .finally(() => setIsLoading(false));
+      .finally(() => {
+        setIsLoading(false)
+        myForm.reset();
+      });
   };
 
   return (
