@@ -10,7 +10,7 @@ function formValid(body) {
 
 export default async function handler(req, res) {
     if (!formValid(req.body)) {
-        res.status(422).end();
+        res.json({ error: "Incomplete form !" }, { status: 500 });
         return;
     }
 
