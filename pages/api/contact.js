@@ -34,7 +34,7 @@ export default async function handler(req, res) {
     const mailOptions = {
         from: process.env.MY_EMAIL,
         to: process.env.MY_EMAIL,
-        subject: `Message from ${name} (${subject})`,
+        subject: `Nouveau message de ${name}`,
         html: emailHtml
     };
 
@@ -42,7 +42,7 @@ export default async function handler(req, res) {
         new Promise((resolve, reject) => {
             transport.sendMail(mailOptions, function (err) {
                 if (!err) {
-                    resolve('Email sent');
+                    resolve('Message Envoyé ! 🚀');
                 } else {
                     reject(err.message);
                 }
@@ -51,7 +51,7 @@ export default async function handler(req, res) {
 
     try {
         await sendMailPromise();
-        return res.json({ message: 'Email sent' });
+        return res.json({ message: 'Message Envoyé ! 🚀' });
     } catch (err) {
         return res.json({ error: err }, { status: 500 });
     }

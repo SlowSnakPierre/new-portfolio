@@ -27,7 +27,7 @@ export function Email(props) {
             <Body style={main}>
                 <Container>
                     <Section style={logo}>
-                        <Img src="https://slowsnakpierre.com/logo.svg" />
+                        <Img src="https://new-portfolio-git-master-slowsnakpierres-projects.vercel.app/logo.svg" />
                     </Section>
 
                     <Section style={content}>
@@ -72,11 +72,6 @@ export function Email(props) {
                                 <Text style={paragraph}>
                                     {message}
                                 </Text>
-                            </Column>
-                        </Row>
-                        <Row style={{ ...boxInfos, paddingTop: "0" }}>
-                            <Column style={containerButton} colSpan={2}>
-                                <Button style={button}>Répondre</Button>
                             </Column>
                         </Row>
                     </Section>
