@@ -9,7 +9,6 @@ import {
   HiUser,
   HiViewColumns,
   HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
   HiEnvelope,
   HiLanguage,
 } from "react-icons/hi2";
@@ -29,11 +28,12 @@ const Nav = () => {
     { name: "Français", code: "fr", Icon: FR },
   ];
 
-  const changeLocale = (locale) => {
-    router.push({
+  const changeLocale = async (locale) => {
+    await router.push({
       route: router.pathname,
       query: router.query
-    }, router.asPath, { locale });
+    }, router.asPath, { locale, shallow: true });
+    router.reload();
   }
 
   const currentLanguage =
@@ -47,15 +47,13 @@ const Nav = () => {
   useEffect(() => {
     function handleClickOutside(event) {
       if (buttonRef.current && !buttonRef.current.contains(event.target)) {
-        setIsOpen(false); // Step 3
+        setIsOpen(false);
       }
     }
 
-    // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside); // Step 4
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside); // Step 5
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [buttonRef]);
 
@@ -64,11 +62,6 @@ const Nav = () => {
     { name: t('nav-about'), path: "/about", Icon: HiUser },
     { name: t('nav-services'), path: "/services", Icon: HiRectangleGroup },
     { name: t('nav-projects'), path: "/projects", Icon: HiViewColumns },
-    // {
-    //   name: t('nav-testimonials'),
-    //   path: "/testimonials",
-    //   Icon: HiChatBubbleBottomCenterText,
-    // },
     {
       name: t('nav-contact'),
       path: "/contact",

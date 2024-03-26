@@ -8,7 +8,6 @@ import {
   FaJs,
   FaReact,
   FaWordpress,
-  FaRoblox,
 } from "react-icons/fa";
 import {
   SiAdobephotoshop,
@@ -108,7 +107,7 @@ const About = () => {
   ];
 
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left max-xl:overflow-y-scroll">
+    <div className="h-full bg-primary/30 py-32 text-center xl:text-left max-xl:overflow-y-auto">
 
       <Circles />
 
@@ -117,9 +116,9 @@ const About = () => {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden min-[1500px]:flex absolute bottom-2/4 left-1.5 w-80 h-auto bounce"
+        className="hidden min-[1500px]:flex absolute bottom-2/4 left-1.5 w-44 min-[1600px]:w-52 min-[1700px]:w-[16rem] min-[1800px]:w-80 min-[1900px]:w-[22rem] min-[2000px]:w-96 h-auto bounce"
       >
-        <div className="translate-y-2/4">
+        <div className="translate-y-1/2 w-full h-full">
           <Avatar />
         </div>
       </motion.div>
@@ -155,7 +154,7 @@ const About = () => {
             <div className="flex flex-1 xl:gap-x-6">
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} />
+                  <CountUp start={0} end={11} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   {t('about.years')}
@@ -164,7 +163,7 @@ const About = () => {
 
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} />
+                  <CountUp start={0} end={50} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   {t('about.clients')}
@@ -173,7 +172,7 @@ const About = () => {
 
               <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} />
+                  <CountUp start={0} end={100} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   {t('about.projects')}
