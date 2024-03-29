@@ -15,22 +15,22 @@ const workSlides = {
       images: [
         {
           title: "Infinity RP",
-          path: "/infinityrp.png",
+          path: "/infinityrp.webp",
           link: "http://infinityroleplay.fr",
         },
         {
           title: "Site 97",
-          path: "/site97.png",
+          path: "/site97.webp",
           link: "https://www.roblox.com/games/6786187798",
         },
         {
           title: "Archaea",
-          path: "/archaea.png",
+          path: "/archaea.webp",
           link: "https://www.roblox.com/games/10825023230",
         },
         {
           title: "LSPDFR",
-          path: "/lspdfr.png",
+          path: "/lspdfr.webp",
           // link: "http://example.com",
         },
       ],

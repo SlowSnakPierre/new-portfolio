@@ -78,7 +78,7 @@ export function Email(props) {
                         <Img
                             style={image}
                             width={620}
-                            src="https://react-email-demo-bdj5iju9r-resend.vercel.app/static/yelp-footer.png"
+                            src="https://react-email-demo-bdj5iju9r-resend.vercel.app/static/yelp-footer.webp"
                         />
                     </Section>
 
