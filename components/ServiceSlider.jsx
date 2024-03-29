@@ -8,7 +8,8 @@ import {
 } from "react-icons/rx";
 import { FreeMode, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next';
+import Link from "next/link";
 
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -66,7 +67,7 @@ const ServiceSlider = () => {
     >
       {serviceData.map((item, i) => (
         <SwiperSlide key={i}>
-          <a href="/contact">
+          <Link href="/contact">
             <div className="bg-[rgba(65,47,123,0.15)] relative h-[125px] max-[320px]:h-[175px] sm:h-[250px] md:h-[300px] overflow-hidden rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300">
               <div className="text-4xl text-accent mb-4">
                 <item.Icon aria-hidden />
@@ -85,7 +86,7 @@ const ServiceSlider = () => {
                 />
               </div>
             </div>
-          </a>
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>
