@@ -76,19 +76,19 @@ const WorkSlider = () => {
     >
       {workSlides.slides.map((slide, i) => (
         <SwiperSlide key={i}>
-          <div className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 xl:grid-cols-2 xl:grid-rows-2 gap-3">
+          <div className="flex flex-wrap justify-center align-center">
             {slide.images.map((image, imageI) => (
               <div
-                className="relative rounded-lg overflow-hidden flex items-center justify-center group"
+                className="relative p-2 basis-24 sm:basis-36 lg:basis-60 xl:basis-72 2xl:basis-80 rounded-lg overflow-hidden flex items-center justify-center group"
                 key={imageI}
               >
                 <div className="flex items-center justify-center relative overflow-hidden group">
                   <Image
-                    className="aspect-video object-contain"
+                    className="aspect-square object-contain"
                     src={image.path}
                     alt={image.title}
-                    width={500}
-                    height={300}
+                    width={1024}
+                    height={1024}
                   />
 
                   <div
